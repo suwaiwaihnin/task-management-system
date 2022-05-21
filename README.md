@@ -1,7 +1,3 @@
-Task Management System with
+Task Management System with user authorization and authentication.
 
- User Create,
- 
- User Login,
- 
- Task create with schdule date and complete with multiple checkbox actions.
+Task with schdule date and complete date and with multiple checkbox actions.
