@@ -10,7 +10,9 @@
                     <table class="table align-items-center table-striped">
                         <thead class="thead">
                             <tr>
-                                <th scope="col"></th>
+                                <th scope="col">
+                                    <!-- <input :disabled='emptyData()' type="checkbox" v-model="isSelect"> -->
+                                </th>
                                 <th scope="col">Title</th>
                                 <th scope="col">Schedule_Date</th>
                                 <th scope="col">Complete_Date</th>
@@ -136,7 +138,7 @@ export default {
     data(){
         return{
             selected:[],
-            select_all:false,
+            allSelected:false,
             isSelect:false,
             selectIncomplete:false,
             incompleteSelected : [],
@@ -160,7 +162,7 @@ export default {
     },
     methods:{
         selectAll()
-        { if(this.isSelect == false){
+        { if(!this.isSelect){
                     this.complete_task.forEach(t => {
                       this.selected.push(t.id)
                     });
@@ -169,6 +171,18 @@ export default {
                     this.selected = []
                 }
             },
+        // selectAll(){
+        //     if(!allSelected){
+        //         this.complete_task.forEach(t => {
+        //               this.selected.push(t.id)
+        //             });
+        //     }else{
+        //         this.isSelect = false;
+        //         this.complete_task.forEach(t => {
+        //               this.selected.push(t.id)
+        //             });
+        //     }
+        // },
         emptyData(){
             if (this.complete_task.data.length < 1)
                 return true;

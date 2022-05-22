@@ -89,6 +89,17 @@ export default {
         }
 
     },
+     watch:{
+        '$page.props.success' :function(value){
+            this.$toastr.s(value);
+        },
+        '$page.props.error' :function(value){
+            this.$toastr.e(value);
+        },
+        '$page.props.info' :function(value){
+            this.$toastr.i(value);
+        }
+    }
 
 }
 </script>

@@ -25,7 +25,8 @@ class AuthController extends Controller
             return redirect('/task')->with('success','Welcome '.Auth::user()->name);
         }
         else{
-            return redirect()->back()->with('danger','Email and Password does not match');
+            // return('email fail');
+            return redirect()->back()->with('error','Email and Password does not match');
         }
     }
     public function logout(Request $request)
@@ -44,6 +45,7 @@ class AuthController extends Controller
         $id = Auth::user('id');
         $user = User::where('email',$request->email)->first();
         $request->validate([
+            'email' => 'required',
             'password' => 'required|min:5'
         ]);
         $user->update([

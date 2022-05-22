@@ -2187,6 +2187,17 @@ __webpack_require__.r(__webpack_exports__);
         }
       });
     }
+  },
+  watch: {
+    '$page.props.success': function $pagePropsSuccess(value) {
+      this.$toastr.s(value);
+    },
+    '$page.props.error': function $pagePropsError(value) {
+      this.$toastr.e(value);
+    },
+    '$page.props.info': function $pagePropsInfo(value) {
+      this.$toastr.i(value);
+    }
   }
 });
 
@@ -2305,6 +2316,17 @@ __webpack_require__.r(__webpack_exports__);
         }
       });
     }
+  },
+  watch: {
+    '$page.props.success': function $pagePropsSuccess(value) {
+      this.$toastr.s(value);
+    },
+    '$page.props.error': function $pagePropsError(value) {
+      this.$toastr.e(value);
+    },
+    '$page.props.info': function $pagePropsInfo(value) {
+      this.$toastr.i(value);
+    }
   }
 });
 
@@ -2410,6 +2432,17 @@ __webpack_require__.r(__webpack_exports__);
           return _this.loading = false;
         }
       });
+    }
+  },
+  watch: {
+    '$page.props.success': function $pagePropsSuccess(value) {
+      this.$toastr.s(value);
+    },
+    '$page.props.error': function $pagePropsError(value) {
+      this.$toastr.e(value);
+    },
+    '$page.props.info': function $pagePropsInfo(value) {
+      this.$toastr.i(value);
     }
   }
 });
@@ -3033,6 +3066,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -3048,7 +3083,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       selected: [],
-      select_all: false,
+      allSelected: false,
       isSelect: false,
       selectIncomplete: false,
       incompleteSelected: [],
@@ -3068,7 +3103,7 @@ __webpack_require__.r(__webpack_exports__);
     selectAll: function selectAll() {
       var _this = this;
 
-      if (this.isSelect == false) {
+      if (!this.isSelect) {
         this.complete_task.forEach(function (t) {
           _this.selected.push(t.id);
         });
@@ -3077,6 +3112,18 @@ __webpack_require__.r(__webpack_exports__);
         this.selected = [];
       }
     },
+    // selectAll(){
+    //     if(!allSelected){
+    //         this.complete_task.forEach(t => {
+    //               this.selected.push(t.id)
+    //             });
+    //     }else{
+    //         this.isSelect = false;
+    //         this.complete_task.forEach(t => {
+    //               this.selected.push(t.id)
+    //             });
+    //     }
+    // },
     emptyData: function emptyData() {
       if (this.complete_task.data.length < 1) return true;
     },
