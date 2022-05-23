@@ -3112,18 +3112,6 @@ __webpack_require__.r(__webpack_exports__);
         this.selected = [];
       }
     },
-    // selectAll(){
-    //     if(!allSelected){
-    //         this.complete_task.forEach(t => {
-    //               this.selected.push(t.id)
-    //             });
-    //     }else{
-    //         this.isSelect = false;
-    //         this.complete_task.forEach(t => {
-    //               this.selected.push(t.id)
-    //             });
-    //     }
-    // },
     emptyData: function emptyData() {
       if (this.complete_task.data.length < 1) return true;
     },

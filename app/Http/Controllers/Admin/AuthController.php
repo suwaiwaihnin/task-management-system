@@ -25,7 +25,6 @@ class AuthController extends Controller
             return redirect('/task')->with('success','Welcome '.Auth::user()->name);
         }
         else{
-            // return('email fail');
             return redirect()->back()->with('error','Email and Password does not match');
         }
     }
@@ -42,7 +41,6 @@ class AuthController extends Controller
     }
 
     public function resetPassword(Request $request){
-        $id = Auth::user('id');
         $user = User::where('email',$request->email)->first();
         $request->validate([
             'email' => 'required',
@@ -51,7 +49,7 @@ class AuthController extends Controller
         $user->update([
             'password' => Hash::make($request->password)
         ]);
-        return redirect('/login')->with('info','Change Password Successfully');
+        return redirect('/login')->with('info','Change Password Successfully. Please Login Again.');
     }
 
     public function showRegister(){

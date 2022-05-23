@@ -171,18 +171,6 @@ export default {
                     this.selected = []
                 }
             },
-        // selectAll(){
-        //     if(!allSelected){
-        //         this.complete_task.forEach(t => {
-        //               this.selected.push(t.id)
-        //             });
-        //     }else{
-        //         this.isSelect = false;
-        //         this.complete_task.forEach(t => {
-        //               this.selected.push(t.id)
-        //             });
-        //     }
-        // },
         emptyData(){
             if (this.complete_task.data.length < 1)
                 return true;
