@@ -48,13 +48,15 @@
                             </select>
                             <small v-show='errors.priority' class="text-danger">{{errors.priority}}</small>
                         </div>
-                        <button type="submit" class="btn btn-primary" :disabled='loading'>
-                            <div  v-show='loading' class="spinner-border spinner-border-sm" role="status">
-                                <span class="sr-only">Loading...</span>
-                            </div>
-                            Update
-                        </button>
-                    </form>
+                        <div class='text-center'>
+                            <button type="submit" class="btn btn-primary" :disabled='loading'>
+                                <div  v-show='loading' class="spinner-border spinner-border-sm" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                                Update
+                            </button>
+                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
