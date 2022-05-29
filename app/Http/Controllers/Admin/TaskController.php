@@ -108,7 +108,7 @@ class TaskController extends Controller
     public function searchTask($search){
        $complete_task = Task::where('title','like',"%$search%")->where('status','complete')->latest()->paginate(5);
        $incomplete_task = Task::where('title','like',"%$search%")->where('status','incomplete')->latest()->paginate(5);
-        dd ($complete_task);
+        dd ($search);
        //return Inertia::render('Task/Index',['complete_task'=>$complete_task,'incomplete_task'=>$incomplete_task]);
     }
 }
