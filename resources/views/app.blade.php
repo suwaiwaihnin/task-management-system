@@ -6,7 +6,7 @@
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet" />
     <script src="{{ mix('/js/app.js') }}" defer></script>
       <!-- Favicon -->
-  <link href="/assets/img/brand/favicon.png" rel="icon" type="image/png">
+  <!-- <link href="/assets/img/brand/favicon.png" rel="icon" type="image/png"> -->
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   <!-- Icons -->
