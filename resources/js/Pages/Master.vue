@@ -64,7 +64,7 @@
             </a>
             <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
               <div class=" dropdown-header noti-title">
-                <h6 class="text-overflow m-0">Welcome!</h6>
+                <h6 class="text-overflow m-0">Welcome {{$page.props.auth.name}}!</h6>
               </div>
               <div class="dropdown-divider"></div>
               <inertia-link href="/logout" class="dropdown-item">
