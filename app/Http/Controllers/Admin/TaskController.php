@@ -105,11 +105,10 @@ class TaskController extends Controller
         return redirect()->back()->with('info','Changed Status');
     }
 
+    //Search by Title
     public function searchTask($search){
-       //$complete_task = Task::where('title','like',"%$search%")->where('status','complete')->latest()->paginate(5);
        $complete_task = Task::where(DB::raw('LOWER(title)'), 'like', '%' .  strtolower($search) . '%')->where('status','complete')->latest()->paginate(5);
        $incomplete_task = Task::where(DB::raw('LOWER(title)'), 'like', '%' .  strtolower($search) . '%')->where('status','incomplete')->latest()->paginate(5);
-       //$incomplete_task = Task::where('title','like',"%$search%")->where('status','incomplete')->latest()->paginate(5);
        return Inertia::render('Task/Index',['complete_task'=>$complete_task,'incomplete_task'=>$incomplete_task]);
     }
 }
