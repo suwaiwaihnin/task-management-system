@@ -26,7 +26,7 @@ Route::get('/register',[AuthController::class,'showRegister']);
 Route::post('/register',[AuthController::class,'postRegister']);
 
 
-Route::group(['middleware'=>'AuthUser'],function()
+Route::group(['middleware'=>'AuthUser'],function(){
     Route::get('/',[TaskController::class,'index']);
     Route::get('/task',[TaskController::class,'index']);
     Route::get('/create',[TaskController::class,'create']);
