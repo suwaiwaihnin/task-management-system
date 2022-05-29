@@ -4,7 +4,7 @@
         <div class="col-lg-5 col-md-7">
           <div class="card bg-secondary shadow border-0">
             <div class="card-header bg-primary ">
-              <div class="text-center mt-2 mb-3">
+              <div class="text-center text-white mt-2 mb-3">
                   <h3>Login</h3>
               </div>
             </div>
